@@ -1,26 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-const App: React.FC = () => {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import './App.css';
+import Login from './Login';
+import Main from './Main';
+
+interface State {
+  isLoggedIn: boolean;
+  user_name: string;
 }
 
-export default App;
+interface Props {}
+
+export default class App extends React.Component<Props, State> {
+  state: State = {
+      isLoggedIn: false, 
+      user_name: "",
+  }
+  set_user = (name: string) => {
+      this.setState({isLoggedIn:true, user_name:name})
+  }
+  render()  {
+      if (this.state.isLoggedIn) {
+          return <Main username={this.state.user_name}/>;
+      }
+      return <Login parent={this.set_user}/>;
+  }
+}

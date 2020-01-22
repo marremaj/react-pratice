@@ -1,0 +1,13 @@
+.color_box {
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+    border: 1px solid black;
+    margin: 10px
+}
+.color_swatch {
+    height: 80%;
+    width: 80%;
+    margin: 10%;
+    cursor: pointer;
+}
