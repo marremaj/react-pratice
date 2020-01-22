@@ -1,5 +1,11 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Motivation
+
+This project was meant to practice using React with typescript.
+The project is meant to be simple and practice the basics.
+The UI consists of a form, which you can use to write a username, and 3 fields in which you can add or remove random color swatches.
+
 ## Available Scripts
 
 In the project directory, you can run:
